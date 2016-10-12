@@ -4,7 +4,7 @@
 
 <ul>
   <li *ngFor="let traject of trajects | async">
-    <pre>{{traject | json}}</pre>
+    <traject-line [traject]="traject" (deleteTraject)="deleteTraject($event)"></traject-line>
   </li>
 </ul>
 

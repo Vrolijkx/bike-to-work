@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {TrajectService} from '../traject-api/traject.service';
 import {FirebaseListObservable} from 'angularfire2';
-import {Traject} from '../traject-api/Traject';
+import {Traject} from '../traject-api/traject';
 
 @Component({
   selector: 'app-trajects',
@@ -23,6 +23,10 @@ export class TrajectsComponent {
       start: 'Akkerstraat 21, Hechtel',
       end: 'Herkerodensingle 8B, Hasselt'
     });
+  }
+
+  deleteTraject(traject:Traject) {
+    this.trajects.remove(traject);
   }
 
 }

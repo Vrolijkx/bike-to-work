@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
-import {Traject} from './Traject';
+import {Traject} from './traject';
 import * as firebase from 'firebase';
 
 @Injectable()

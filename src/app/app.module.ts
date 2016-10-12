@@ -9,6 +9,7 @@ import {RouterModule} from '@angular/router';
 import {routes} from './routes';
 import { TrajectsComponent } from './trajects/trajects.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TrajectLineComponent } from './traject-line/traject-line.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   declarations: [
     AppComponent,
     TrajectsComponent,
-    DashboardComponent
+    DashboardComponent,
+    TrajectLineComponent
   ],
   bootstrap: [AppComponent]
 })
