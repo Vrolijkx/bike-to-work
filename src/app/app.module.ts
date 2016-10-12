@@ -1,20 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {TrajectApiModule} from './traject-api/traject-api.module';
+import {environment} from '../environments/environment';
+import {RouterModule} from '@angular/router';
+import {routes} from './routes';
+import { TrajectsComponent } from './trajects/trajects.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TrajectLineComponent } from './traject-line/traject-line.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    TrajectApiModule.forRoot(environment.fireBaseConfig),
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    TrajectsComponent,
+    DashboardComponent,
+    TrajectLineComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

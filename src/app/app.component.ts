@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import {TrajectService} from './traject-api/traject.service';
+import {AngularFire, FirebaseAuthState} from 'angularfire2';
+import {Component} from '@angular/core';
+import 'rxjs';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `<router-outlet></router-outlet>`
 })
 export class AppComponent {
-  title = 'app works!';
+
+
+  constructor(angularFire: AngularFire, private trajectService: TrajectService ) {
+    angularFire.auth.concatMap((authState: FirebaseAuthState) => {
+      console.log('AUTH:', authState);
+      if(!authState) {
+        return Promise.resolve(angularFire.auth.login());
+      }
+      return Promise.resolve(authState);
+    }).subscribe(() => {});
+  }
 }
