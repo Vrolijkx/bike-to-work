@@ -1,0 +1,11 @@
+<p>
+  trajects works!
+</p>
+
+<ul>
+  <li *ngFor="let traject of trajects | async">
+    <pre>{{traject | json}}</pre>
+  </li>
+</ul>
+
+<button (click)="openNewTrajectPage()">Add new default traject</button>
