@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import {TrajectService} from '../traject-api/traject.service';
 import {FirebaseListObservable} from 'angularfire2';
-import {Traject} from '../traject-api/traject';
+import {Traject, PersistedTraject, TrajectService} from '../../traject-api';
 
 @Component({
   selector: 'app-trajects',
   templateUrl: './trajects.component.html',
-  styleUrls: ['./trajects.component.css']
 })
 export class TrajectsComponent {
   trajects: FirebaseListObservable<Traject[]>;
@@ -25,8 +23,8 @@ export class TrajectsComponent {
     });
   }
 
-  deleteTraject(traject:Traject) {
-    this.trajects.remove(traject);
+  deleteTraject(traject :PersistedTraject) {
+    this.trajectService.removeTraject(traject);
   }
 
 }

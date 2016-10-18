@@ -7,22 +7,20 @@ import {TrajectApiModule} from './traject-api/traject-api.module';
 import {environment} from '../environments/environment';
 import {RouterModule} from '@angular/router';
 import {routes} from './routes';
-import { TrajectsComponent } from './trajects/trajects.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TrajectLineComponent } from './traject-line/traject-line.component';
+import {TrajectUiModule} from './traject-ui/traject-ui.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    TrajectUiModule,
     TrajectApiModule.forRoot(environment.fireBaseConfig),
     RouterModule.forRoot(routes)
   ],
   declarations: [
     AppComponent,
-    TrajectsComponent,
-    DashboardComponent,
-    TrajectLineComponent
+    DashboardComponent
   ],
   bootstrap: [AppComponent]
 })

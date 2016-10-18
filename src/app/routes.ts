@@ -1,6 +1,6 @@
 import {Routes} from '@angular/router';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {TrajectsComponent} from './trajects/trajects.component';
+import {TrajectsComponent} from './traject-ui';
 
 
 export const routes: Routes = [

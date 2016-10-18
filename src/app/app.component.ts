@@ -9,7 +9,6 @@ import 'rxjs';
 })
 export class AppComponent {
 
-
   constructor(angularFire: AngularFire, private trajectService: TrajectService ) {
     angularFire.auth.concatMap((authState: FirebaseAuthState) => {
       console.log('AUTH:', authState);
