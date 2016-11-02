@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
-import {Traject} from './traject';
-import * as firebase from 'firebase';
+import {Traject, PersistedTraject} from './traject';
+import 'firebase';
 
 @Injectable()
 export class TrajectService {
@@ -15,7 +15,11 @@ export class TrajectService {
     return this._trajects;
   }
 
-  addTraject(traject: Traject): firebase.database.ThenableReference {
-    return this._trajects.push(traject);
+  public addTraject(traject: Traject): Promise<Traject> {
+    return Promise.resolve(this._trajects.push(traject));
+  }
+
+  public removeTraject(traject: PersistedTraject): Promise<any> {
+    return Promise.resolve(this._trajects.remove(traject));
   }
 }

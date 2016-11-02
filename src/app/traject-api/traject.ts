@@ -1,8 +1,12 @@
-import {FirebaseOperation} from 'angularfire2/database';
+import 'firebase';
 
-export interface Traject extends FirebaseOperation {
+export interface Traject {
   name: string,
   start: string,
   end: string,
   distance: number
+}
+
+export interface PersistedTraject extends Traject, firebase.database.DataSnapshot {
+
 }
