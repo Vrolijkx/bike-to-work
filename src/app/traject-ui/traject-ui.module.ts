@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {TrajectsComponent} from './trajects/trajects.component';
+import {TrajectLineComponent} from './traject-line/traject-line.component';
+import {SharedModule} from '../shared';
 
 @NgModule({
   imports: [
-    CommonModule
+    SharedModule
   ],
-  declarations: [TrajectsComponent]
+  declarations: [TrajectsComponent, TrajectLineComponent],
+  exports: [TrajectsComponent]
 })
 export class TrajectUiModule { }

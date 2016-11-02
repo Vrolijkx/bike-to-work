@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 40px;
+}
+
+
+:host > * {
+  margin: 10px;
+  flex-grow: 1;
+}
+
+:host > app-google-fit-suggestions {
+  width: 100%;
+}
+
+:host > totals {
+  flex: 1;
+}
+
+:host > #goals-component {
+  flex: 1;
+}
+
+div > md-card {
+  height: calc(100% - 48px);
+}
+
+.action-button {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+}

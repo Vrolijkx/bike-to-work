@@ -5,7 +5,14 @@ import 'rxjs';
 
 @Component({
   selector: 'app-root',
-  template: `<router-outlet></router-outlet>`
+  template: `
+<md-toolbar color="primary">
+  <span>Bike to work</span>
+</md-toolbar>
+<main>
+  <router-outlet></router-outlet>
+</main>
+`
 })
 export class AppComponent {
 

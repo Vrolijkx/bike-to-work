@@ -1,0 +1,35 @@
+<md-card>
+  <md-card-subtitle>
+    <!-- menu opens when trigger button is clicked -->
+    Periode:
+    <button md-button [md-menu-trigger-for]="periodeMenu">
+      Week
+    </button>
+
+    <md-menu #periodeMenu>
+      <button md-menu-item>Week</button>
+      <button md-menu-item>Maand</button>
+      <button md-menu-item>Jaar</button>
+      <button md-menu-item>Altijd</button>
+    </md-menu>
+  </md-card-subtitle>
+  <md-card-content>
+    <md-list>
+      <md-list-item>
+        <md-icon class="md-24">av_timer</md-icon>
+        <span class="value">5:30</span>
+        <span class="unit">uur</span>
+      </md-list-item>
+      <md-list-item>
+        <md-icon class="md-24">directions</md-icon>
+        <span class="value">250</span>
+        <span class="unit">km</span>
+      </md-list-item>
+      <md-list-item>
+        <md-icon class="md-24">euro_symbol</md-icon>
+        <span class="value">57,20</span>
+        <span class="unit">euro</span>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>
