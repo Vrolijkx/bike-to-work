@@ -1,4 +1,3 @@
-import 'firebase';
 
 export interface Traject {
   name: string,
@@ -7,6 +6,6 @@ export interface Traject {
   distance: number
 }
 
-export interface PersistedTraject extends Traject, firebase.database.DataSnapshot {
+export interface PersistedTraject extends Traject {
 
 }

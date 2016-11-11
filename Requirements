@@ -1,0 +1,30 @@
+Requirements:
+
+gebruikers:
+- Datums per rit/traject groeperen per maand/ totaal per maand
+- trajecten kunnen toevoegen
+- gebruikers
+- excel export knop
+
+
+Extra features:
+- google fit integratie
+	- (voorstellen met notificatie op telefoon)
+- sso integratie (eventueel)
+- google account integratie
+- offline
+- competitie voor het meeste ritten/km
+- statestiekskes
+- doelstellingen
+
+
+Technologie stack:
+- Firebase
+- Angular2
+
+Git repository:
+- Kristof maakt aan een geeft Niels toegang
+
+vragen aan ine:
+- Hoe zit het met verzekering fiets woonwerkverkeer
+

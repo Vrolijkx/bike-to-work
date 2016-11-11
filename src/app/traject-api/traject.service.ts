@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 import {Traject, PersistedTraject} from './traject';
-import 'firebase';
 
 @Injectable()
 export class TrajectService {
@@ -20,6 +19,6 @@ export class TrajectService {
   }
 
   public removeTraject(traject: PersistedTraject): Promise<any> {
-    return Promise.resolve(this._trajects.remove(traject));
+    return Promise.resolve(this._trajects.remove(<any>traject));
   }
 }

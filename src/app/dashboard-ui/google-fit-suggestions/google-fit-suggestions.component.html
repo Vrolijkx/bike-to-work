@@ -4,9 +4,7 @@
     <table>
       <thead>
       <tr>
-        <th>Wanneer</th>
-        <th>Van</th>
-        <th>Naar</th>
+        <th>Rit</th>
         <th>
           <button md-icon-button md-tooltip="accepteer alle voorstellen" tooltip-position="below">
             <md-icon class="md-24">done_all</md-icon>
@@ -15,25 +13,10 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>Maandag 9u</td>
-        <td>Hechtel</td>
-        <td>Hasselt</td>
+      <tr *ngFor="let ride of potentialRides | async">
+        <td>{{ride | json}}</td>
         <td>
-          <button md-icon-button>
-            <md-icon class="md-24">done</md-icon>
-          </button>
-          <button md-icon-button>
-            <md-icon class="md-24">backspace</md-icon>
-          </button>
-        </td>
-      </tr>
-      <tr>
-        <td>Maandag 17u</td>
-        <td>Hasselt</td>
-        <td>Hechtel</td>
-        <td>
-          <button md-icon-button>
+          <button md-icon-button (click)="accept(ride)">
             <md-icon class="md-24">done</md-icon>
           </button>
           <button md-icon-button>
